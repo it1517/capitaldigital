@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>DAHBOARD | Escuelas</title>
+        <!-- Favicon -->
+        <link rel="icon" type="image/png" href="img/favicon.ico" />
+        
+        <!-- Font awesome-->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
+        
+        <!-- TAILWIND -->
+        <link rel="stylesheet" href="final.css">
+
+    </head>
+
+    <body class="w-full">
+        
+      <nav class="bg-white">
+      <div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
+        <div class="relative flex items-center justify-between h-16">
+          <div class="flex-1 flex items-center justify-start sm:items-stretch sm:justify-start">
+            <button id="sidebarBtn" class="px-4 py-2 text-gray-700 text-2xl rounded-lg hover:bg-gray-200">
+              <img src="../src/assets/icons/menu.svg" alt="Menu"/>
+            </button>
+            
+          </div>
+           
+         
+            
+         <!-- Iconos derechos -->   
+          <div class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0 z-10">
+              
+              <form class="invisible sm:visible">
+              <div class="relative text-gray-500 ml-6 px-3 pt-1">
+                <span class="absolute inset-y-0 left-0 flex items-center pl-2 pt-1">
+                  <button type="submit" class="p-1 focus:outline-none focus:shadow-outline">
+                    <img src="../src/assets/icons/search.svg" alt="Buscar"/>
+                  </button>
+                </span>
+                <input type="search" class="py-2 text-md text-gray-900 w-full
+                rounded-md pl-10 bg-transparent placeholder-gray-800 focus:outline-none
+                focus:bg-white focus:text-gray-800" placeholder="Buscar...">
+              </div>
+            </form>
+
+            <div class="ml-3 relative">
+              <div>
+                <button type="button" class="flex text-sm rounded-full focus:outline-none
+                focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white" id="profileBtn">
+                  <span class="sr-only">Menú de usuario</span>
+                  <img src="../src/assets/icons/user.svg" class="text-gray" alt="User"/>
+                </button>
+              </div>
+
+              <div id="profileDiv" class="hidden origin-top-right absolute right-0 mt-2 w-48 rounded-md shadow-lg py-1 bg-white ring-1 ring-black ring-opacity-5 focus:outline-none">
+                
+                <!-- Active: "bg-gray-100", Not Active: "" -->
+                <a href="#" class="block px-4 py-2 text-sm text-gray-700">
+                  <img src="../src/assets/icons/user.svg" class="text-gray inline"/> Mi Perfil
+                </a>
+                <a href="#" class="block px-4 py-2 text-sm text-gray-700">
+                  <img src="../src/assets/icons/cog.svg" class="text-gray inline"/> Administrar
+                </a>
+                <a href="#" class="block px-4 py-2 text-sm text-gray-700">
+                  <img src="../src/assets/icons/logout.svg" class="text-gray inline"/> Salir
+                </a>
+              </div>
+            </div>
+
+            <div class="ml-3 relative">
+              <div>
+                <button class="text-xl text-gray-800 px-4 py-2 focus:outline-none"
+                id="carritoBtn"><img src="../src/assets/icons/shopping-cart.svg" alt="Carrito"/></button>
+              </div>
+
+              <div id="carritoDiv" class="hidden origin-top-right absolute right-0 mt-2 w-64
+              rounded-md shadow-lg py-1 bg-white ring-1 ring-black ring-opacity-5
+              focus:outline-none">
+                <p class="p-2 text-sm text-gray-700">No hay productos en tu carrito</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <main class="flex bg-gray-100">
+
+      <!-- TABS -->
+      <ul class="tabs w-full" role="tablist">
+
+        <!-- Tab 1: Escuela 1-->
+        <li class="li_de_tabs">
+            <input type="radio" name="tabs" id="tab1" checked />
+            <label for="tab1" role="tab" aria-selected="true" aria-controls="panel1" tabindex="0" class="md:text-base text-sm">Escuela 1</label>
+            <div id="tab-content1" class="tab-content" role="tabpanel" aria-labelledby="tab1" aria-hidden="false">
+              <aside class="bg-gray-900">
+
+                <div class="p-6">
+                  <a href="" class="text-white text-1xl font-semibold hover:text-gray-300 pt-4">
+                    NOMBRE de mi escuela 1
+                  </a>
+                </div>
+        
+                <!-- MENU SIDEBAR -->
+                <ul>
+                  <li class="header-menu bg-demo active-nav-link text-white py-2 pl-2 nav-item text-base font-semibold">
+                    <a href="#" class="flex items-center">
+                      <img src="../src/assets/icons/home.svg" class="text-white p-2">
+                       Inicio
+                    </a>
+                  </li>
+        
+                  <li class="sidebar-dropdown text-white py-2 nav-item text-base font-semibold"> 
+                    <a href="#" class="flex items-center opacity-75 hover:opacity-100 pl-2"> 
+                      <img src="../src/assets/icons/shopping-bag.svg" class="text-white p-2">
+                       Productos
+                    </a>
+                      <div class="sidebar-submenu">
+                          <ul>
+                              <li class="sidebar-dropdropdown font-normal py-2 px-6 bg-white bg-opacity-0 hover:bg-opacity-25"> <a href="#">Video recorrido</a></li>
+                              <li class="sidebar-dropdropdown font-normal py-2 px-6 bg-white bg-opacity-0 hover:bg-opacity-25"> <a href="#">Comentarios</a></li>
+                              <li class="sidebar-dropdropdown font-normal py-2 px-6 bg-white bg-opacity-0 hover:bg-opacity-25"> <a href="#">Fotogalería</a></li>
+                              <li class="sidebar-dropdropdown font-normal py-2 px-6 bg-white bg-opacity-0 hover:bg-opacity-25"> <a href="#">Demo</a></li>
+                           </ul>
+                     </div>
+                   </li>
+        
+                   <li class="sidebar-dropdown text-white py-2 nav-item text-base font-semibold"> 
+                    <a href="#" class="flex items-center opacity-75 hover:opacity-100 pl-2"> 
+                      <img src="../src/assets/icons/home.svg" class="text-white p-2">
+                       Reportes
+                    </a>
+                      <div class="sidebar-submenu">
+                          <ul>
+                              <li class="sidebar-dropdropdown font-normal py-2 px-6 bg-white bg-opacity-0 hover:bg-opacity-25"> <a href="#">Gratuito</a></li>
+                              <li class="sidebar-dropdropdown font-normal py-2 px-6 bg-white bg-opacity-0 hover:bg-opacity-25"> <a href="#">De Pago</a></li>
+                           </ul>
+                     </div>
+                   </li>
+        
+                   <li class="sidebar-dropdown text-white py-2 nav-item text-base font-semibold"> 
+                    <a href="#" class="flex items-center opacity-75 hover:opacity-100 pl-2"> 
+                      <img src="../src/assets/icons/cog.svg" class="text-white p-2">
+                       Administrar
+                    </a>
+                      <div class="sidebar-submenu">
+                          <ul>
+                              <li class="sidebar-dropdropdown font-normal py-2 px-6 bg-white bg-opacity-0 hover:bg-opacity-25"> <a href="#">Editar Datos</a></li>
+                              <li class="sidebar-dropdropdown font-normal py-2 px-6 bg-white bg-opacity-0 hover:bg-opacity-25"> <a href="#">Nueva Escuela</a></li>
+                              <li class="sidebar-dropdropdown font-normal py-2 px-6 bg-white bg-opacity-0 hover:bg-opacity-25"> <a href="#">Comprar widgets</a></li>
+                           </ul>
+                     </div>
+                   </li>
+        
+                   <li class="header-menu text-white py-2 nav-item text-base font-semibold">
+                    <a href="#" class="flex items-center pl-2 opacity-75 hover:opacity-100">
+                      <img src="../src/assets/icons/document-text.svg" class="text-white p-2">
+                       Facturación
+                    </a>
+                  </li>
+                   
+                </ul>
+              </aside>
+        
+              <div class="w-full flex flex-col h-nav overflow-y-hidden">
+                
+        
+                <!-- Mobile Header & Nav -->
+                <header id="sidebarMobile" class="w-full py-5 px-6 sm:hidden hidden">
+                    
+                    <!-- Dropdown Nav -->
+                    <nav class="text-white text-base font-semibold">
+                      <a href="" class="block active-nav-link text-white py-4 pl-6">
+                        <img src="../src/assets/icons/home.svg" class="text-white p-2">
+                         Inicio
+                      </a>
+                      <a href="" class="block text-white opacity-75 hover:opacity-100 py-4 pl-6">
+                          <img src="../src/assets/icons/shopping-bag.svg" class="text-white p-2">
+                          Productos
+                      </a>
+                      <a href="" class="block text-white opacity-75 hover:opacity-100 py-4 pl-6 ">
+                          <img src="../src/assets/icons/chart-bar.svg" class="text-white p-2">
+                          Reportes
+                      </a>
+                      <a href="" class="block text-white opacity-75 hover:opacity-100 py-4 pl-6">
+                          <img src="../src/assets/icons/cog.svg" class="text-white p-2">
+                          Administrar
+                      </a>
+                      <a href="" class="block text-white opacity-75 hover:opacity-100 py-4 pl-6">
+                         <img src="../src/assets/icons/document-text.svg" class="text-white p-2">
+                          Facturación
+                      </a>
+                    </nav>
+        
+                </header>
+        
+                <div class="w-full overflow-x-hidden border-t flex flex-col">
+                    <main class="w-full  p-6 h-nav">
+        
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 my-2 h-auto md:h-43 lg:h-43">
+                            <div>
+                                <h5 class="font-bold pb-3">Reporte</h5>
+                                <div class="shadow-sm- bg-white h-91 rounded grid grid-cols-1 sm:grid-cols-1 p-8">
+        
+                                  <div class="grid grid-cols-2 sm:grid-cols-2 gap-4 my-2  flex items-end">
+                                    <div>
+                                      <div class="grid grid-rows-2 md:grid-cols-1 lg:grid-flow-col gap-0">
+                                        <div class="lg:row-span-2 md:row-span-1 md:col-span-2 text-center mx-auto"><img src="../src/assets/icons/chart-pie.svg" alt="Chart" class="w-10"></div>
+                                        <div class="row-span-1 md:col-span-2 col-span-1 lg:text-left md:text-center text-center"><h6 class="lg:text-5xl md:text-2xl font-bold ">3245</h6></div>
+                                        <div class="row-span-1 md:col-span-2 col-span-1 lg:text-left md:text-center text-center mt-especial"> <p class="block clear">vistas</p></div>
+                                      </div>
+                                    </div>
+        
+                                    <div>
+                                      <div class="grid grid-rows-2 md:grid-cols-1 lg:grid-flow-col gap-0">
+                                        <div class="lg:row-span-2 md:row-span-1 md:col-span-2 text-center mx-auto"><img src="../src/assets/icons/chart-pie.svg" alt="Chart" class="w-10"></div>
+                                        <div class="row-span-1 md:col-span-2 col-span-1 lg:text-left md:text-center text-center"><h6 class="lg:text-5xl md:text-2xl font-bold ">678</h6></div>
+                                        <div class="row-span-1 md:col-span-2 col-span-1 lg:text-left md:text-center text-center mt-especial"> <p class="block clear">solicitudes</p></div>
+                                      </div>
+                                    </div>
+                                  </div>
+        
+                                  <div class="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-4 my-2 flex items-start pt-8 text-center">
+                                    <div class="block">
+                                      <a href="#" class="btn-secondary">Ver detalle</a>
+                                    </div>
+        
+                                    <div class="block">
+                                      <a href="#" class="btn-primary">Descargar</a>
+                                    </div>
+                                </div>
+                                </div>
+                            </div>
+        
+                            <div>
+                              <h5 class="font-bold pb-3">Facturación</h5>
+                              <div class="shadow-sm- bg-white h-91 rounded grid grid-cols-1 sm:grid-cols-1 p-8">
+        
+                                <div class="grid grid-cols-2 sm:grid-cols-2 gap-4 my-2  flex items-end">
+                                  <div>
+                                    <div class="grid grid-rows-2 md:grid-cols-1 lg:grid-flow-col gap-0">
+                                      <div class="lg:row-span-2 md:row-span-1 md:col-span-2 text-center mx-auto"><img src="../src/assets/icons/document-text.svg" alt="Chart" class="w-10"/></div>
+                                      <div class="row-span-1 md:col-span-2 col-span-1 lg:text-left md:text-center text-center"><h6 class="lg:text-5xl md:text-2xl font-bold ">2</h6></div>
+                                      <div class="row-span-1 md:col-span-2 col-span-1 lg:text-left md:text-center text-center"> <p class="block clear">facturas</p></div>
+                                    </div>
+                                  </div>
+        
+                                  <div>
+                                    <div class="grid grid-rows-2 md:grid-cols-1 lg:grid-flow-col gap-0">
+                                      <div class="lg:row-span-2 md:row-span-1 md:col-span-2 text-center mx-auto"><img src="../src/assets/icons/pencil.svg" alt="Chart" class="w-10"/></div>
+                                      <div class="row-span-1 md:col-span-2 col-span-1 lg:text-left md:text-center text-center"><h6 class="lg:text-5xl md:text-2xl font-bold">Editar</h6></div>
+                                      <div class="row-span-1 md:col-span-2 col-span-1 lg:text-left md:text-center text-center"> <p class="block clear">datos</p></div>
+                                    </div>
+                                  </div>
+                                </div>
+        
+                                <div class="grid grid-cols-1 sm:grid-cols-1 gap-4 my-2 flex items-start pt-8 text-center">
+                                 
+        
+                                  <div class="block">
+                                    <a href="#" class="btn-primary">Ver todo</a>
+                                  </div>
+                              </div>
+                              </div>   
+                          </div>
+                        </div>
+        
+        
+                        <div class="grid grid-cols-1 sm:grid-cols-4 gap-4 my-2 pt-6">
+                          <h5 class="font-bold pb-3">Productos</h5>
+                        </div>
+                        <div class="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4 my-2 lg:h-45 md:h-45 h-full">
+                          
+                            <div class="shadow-sm bg-white rounded flex justify-center items-center grid grid-cols-1 sm:grid-cols-1">
+                               <div class="text-center">
+                                  <img src="../src/assets/icons/video-camera.svg" alt="Video" class="text-center mx-auto block p-3 mb-4 text-2xl border border-demo rounded-full">
+                                  <p class="mt-0 mb-4 md:text-base text text-sm">Video recorrido</p>
+                                  <a href="#" class="btn-primary">Ver todo</a>
+                               </div> 
+                            </div>
+        
+                            <div class="shadow-sm bg-white rounded flex justify-center items-center">
+                              <div class="text-center">
+                                <img src="../src/assets/icons/chat.svg" alt="Video" class="text-center mx-auto block p-3 mb-4 text-2xl border border-demo rounded-full">
+                                <p class="mt-0 mb-4 md:text-base text text-sm">Comentarios</p>
+                                <a href="#" class="btn-primary">Ver todo</a>
+                             </div> 
+                          </div>
+        
+                          <div class="shadow-sm bg-white rounded flex justify-center items-center">
+                            <div class="text-center">
+                              <img src="../src/assets/icons/photograph.svg" alt="Video" class="text-center mx-auto block p-3 mb-4 text-2xl border border-demo rounded-full">
+                              <p class="mt-0 mb-4 md:text-base text text-sm">Fotogalería</p>
+                              <a href="#" class="btn-primary">Ver todo</a>
+                           </div> 
+                        </div>
+        
+                        <div class="shadow-sm bg-white rounded flex justify-center items-center">
+                          <div class="text-center">
+                            <img src="../src/assets/icons/lightning-bolt.svg" alt="Video" class="text-center mx-auto block p-3 mb-4 text-2xl border border-demo rounded-full">
+                            <p class="mt-0 mb-4 md:text-base text text-sm">Demo</p>
+                            <a href="#" class="btn-primary">Ver todo</a>
+                         </div> 
+                      </div>
+        
+                        </div>
+                    </main>
+                </div>
+        
+              </div>
+        
+            </div>
+            </div>
+        </li>
+      
+        <!-- Tab 2: Escuela 2-->
+        <li class="li_de_tabs">
+            <input type="radio" name="tabs" id="tab2" />
+            <label for="tab2" role="tab" aria-selected="false" aria-controls="panel2" tabindex="0" class="md:text-base text-sm">Escuela 2</label>
+            <div id="tab-content2" class="tab-content" role="tabpanel" aria-labelledby="tab2" aria-hidden="true">
+              <aside class="bg-gray-900 relative w-72 md:w-64 hidden sm:block shadow-xl">
+
+                <div class="p-6">
+                  <a href="" class="text-white text-1xl font-semibold hover:text-gray-300 pt-4">
+                    NOMBRE de mi escuela 2
+                  </a>
+                </div>
+        
+                <!-- MENU SIDEBAR -->
+                <ul>
+                  <li class="header-menu bg-demo active-nav-link text-white py-2 pl-2 nav-item text-base font-semibold">
+                    <a href="#" class="flex items-center">
+                      <img src="../src/assets/icons/home.svg" class="text-white p-2">
+                       Inicio
+                    </a>
+                  </li>
+        
+                  <li class="sidebar-dropdown text-white py-2 nav-item text-base font-semibold"> 
+                    <a href="#" class="flex items-center opacity-75 hover:opacity-100 pl-2"> 
+                      <img src="../src/assets/icons/shopping-bag.svg" class="text-white p-2">
+                       Productos
+                    </a>
+                      <div class="sidebar-submenu">
+                          <ul>
+                              <li class="sidebar-dropdropdown font-normal py-2 px-6 bg-white bg-opacity-0 hover:bg-opacity-25"> <a href="#">Video recorrido</a></li>
+                              <li class="sidebar-dropdropdown font-normal py-2 px-6 bg-white bg-opacity-0 hover:bg-opacity-25"> <a href="#">Comentarios</a></li>
+                              <li class="sidebar-dropdropdown font-normal py-2 px-6 bg-white bg-opacity-0 hover:bg-opacity-25"> <a href="#">Fotogalería</a></li>
+                              <li class="sidebar-dropdropdown font-normal py-2 px-6 bg-white bg-opacity-0 hover:bg-opacity-25"> <a href="#">Demo</a></li>
+                           </ul>
+                     </div>
+                   </li>
+        
+                   <li class="sidebar-dropdown text-white py-2 nav-item text-base font-semibold"> 
+                    <a href="#" class="flex items-center opacity-75 hover:opacity-100 pl-2"> 
+                      <img src="../src/assets/icons/home.svg" class="text-white p-2">
+                       Reportes
+                    </a>
+                      <div class="sidebar-submenu">
+                          <ul>
+                              <li class="sidebar-dropdropdown font-normal py-2 px-6 bg-white bg-opacity-0 hover:bg-opacity-25"> <a href="#">Gratuito</a></li>
+                              <li class="sidebar-dropdropdown font-normal py-2 px-6 bg-white bg-opacity-0 hover:bg-opacity-25"> <a href="#">De Pago</a></li>
+                           </ul>
+                     </div>
+                   </li>
+        
+                   <li class="sidebar-dropdown text-white py-2 nav-item text-base font-semibold"> 
+                    <a href="#" class="flex items-center opacity-75 hover:opacity-100 pl-2"> 
+                      <img src="../src/assets/icons/cog.svg" class="text-white p-2">
+                       Administrar
+                    </a>
+                      <div class="sidebar-submenu">
+                          <ul>
+                              <li class="sidebar-dropdropdown font-normal py-2 px-6 bg-white bg-opacity-0 hover:bg-opacity-25"> <a href="#">Editar Datos</a></li>
+                              <li class="sidebar-dropdropdown font-normal py-2 px-6 bg-white bg-opacity-0 hover:bg-opacity-25"> <a href="#">Nueva Escuela</a></li>
+                              <li class="sidebar-dropdropdown font-normal py-2 px-6 bg-white bg-opacity-0 hover:bg-opacity-25"> <a href="#">Comprar widgets</a></li>
+                           </ul>
+                     </div>
+                   </li>
+        
+                   <li class="header-menu text-white py-2 nav-item text-base font-semibold">
+                    <a href="#" class="flex items-center pl-2 opacity-75 hover:opacity-100">
+                      <img src="../src/assets/icons/document-text.svg" class="text-white p-2">
+                       Facturación
+                    </a>
+                  </li>
+                   
+                </ul>
+              </aside>
+        
+              <div class="w-full flex flex-col h-nav overflow-y-hidden">
+                
+        
+                <!-- Mobile Header & Nav -->
+                <header id="sidebarMobile" class="w-full py-5 px-6 sm:hidden hidden">
+                    
+                    <!-- Dropdown Nav -->
+                    <nav class="text-white text-base font-semibold">
+                      <a href="" class="block active-nav-link text-white py-4 pl-6">
+                        <img src="../src/assets/icons/home.svg" class="text-white p-2">
+                         Inicio
+                      </a>
+                      <a href="" class="block text-white opacity-75 hover:opacity-100 py-4 pl-6">
+                          <img src="../src/assets/icons/shopping-bag.svg" class="text-white p-2">
+                          Productos
+                      </a>
+                      <a href="" class="block text-white opacity-75 hover:opacity-100 py-4 pl-6 ">
+                          <img src="../src/assets/icons/chart-bar.svg" class="text-white p-2">
+                          Reportes
+                      </a>
+                      <a href="" class="block text-white opacity-75 hover:opacity-100 py-4 pl-6">
+                          <img src="../src/assets/icons/cog.svg" class="text-white p-2">
+                          Administrar
+                      </a>
+                      <a href="" class="block text-white opacity-75 hover:opacity-100 py-4 pl-6">
+                         <img src="../src/assets/icons/document-text.svg" class="text-white p-2">
+                          Facturación
+                      </a>
+                    </nav>
+        
+                </header>
+        
+                <div class="w-full overflow-x-hidden border-t flex flex-col">
+                  <main class="w-full  p-6 h-nav">
+      
+                      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 my-2 h-auto md:h-43 lg:h-43">
+                          <div>
+                              <h5 class="font-bold pb-3">Reporte</h5>
+                              <div class="shadow-sm- bg-white h-91 rounded grid grid-cols-1 sm:grid-cols-1 p-8">
+      
+                                <div class="grid grid-cols-2 sm:grid-cols-2 gap-4 my-2  flex items-end">
+                                  <div>
+                                    <div class="grid grid-rows-2 md:grid-cols-1 lg:grid-flow-col gap-0">
+                                      <div class="lg:row-span-2 md:row-span-1 md:col-span-2 text-center mx-auto"><img src="../src/assets/icons/chart-pie.svg" alt="Chart" class="w-10"></div>
+                                      <div class="row-span-1 md:col-span-2 col-span-1 lg:text-left md:text-center text-center"><h6 class="lg:text-5xl md:text-2xl font-bold ">3245</h6></div>
+                                      <div class="row-span-1 md:col-span-2 col-span-1 lg:text-left md:text-center text-center mt-especial"> <p class="block clear">vistas</p></div>
+                                    </div>
+                                  </div>
+      
+                                  <div>
+                                    <div class="grid grid-rows-2 md:grid-cols-1 lg:grid-flow-col gap-0">
+                                      <div class="lg:row-span-2 md:row-span-1 md:col-span-2 text-center mx-auto"><img src="../src/assets/icons/chart-pie.svg" alt="Chart" class="w-10"></div>
+                                      <div class="row-span-1 md:col-span-2 col-span-1 lg:text-left md:text-center text-center"><h6 class="lg:text-5xl md:text-2xl font-bold ">678</h6></div>
+                                      <div class="row-span-1 md:col-span-2 col-span-1 lg:text-left md:text-center text-center mt-especial"> <p class="block clear">solicitudes</p></div>
+                                    </div>
+                                  </div>
+                                </div>
+      
+                                <div class="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-4 my-2 flex items-start pt-8 text-center">
+                                  <div class="block">
+                                    <a href="#" class="btn-secondary">Ver detalle</a>
+                                  </div>
+      
+                                  <div class="block">
+                                    <a href="#" class="btn-primary">Descargar</a>
+                                  </div>
+                              </div>
+                              </div>
+                          </div>
+      
+                          <div>
+                            <h5 class="font-bold pb-3">Facturación</h5>
+                            <div class="shadow-sm- bg-white h-91 rounded grid grid-cols-1 sm:grid-cols-1 p-8">
+      
+                              <div class="grid grid-cols-2 sm:grid-cols-2 gap-4 my-2  flex items-end">
+                                <div>
+                                  <div class="grid grid-rows-2 md:grid-cols-1 lg:grid-flow-col gap-0">
+                                    <div class="lg:row-span-2 md:row-span-1 md:col-span-2 text-center mx-auto"><img src="../src/assets/icons/document-text.svg" alt="Chart" class="w-10"/></div>
+                                    <div class="row-span-1 md:col-span-2 col-span-1 lg:text-left md:text-center text-center"><h6 class="lg:text-5xl md:text-2xl font-bold ">2</h6></div>
+                                    <div class="row-span-1 md:col-span-2 col-span-1 lg:text-left md:text-center text-center"> <p class="block clear">facturas</p></div>
+                                  </div>
+                                </div>
+      
+                                <div>
+                                  <div class="grid grid-rows-2 md:grid-cols-1 lg:grid-flow-col gap-0">
+                                    <div class="lg:row-span-2 md:row-span-1 md:col-span-2 text-center mx-auto"><img src="../src/assets/icons/pencil.svg" alt="Chart" class="w-10"/></div>
+                                    <div class="row-span-1 md:col-span-2 col-span-1 lg:text-left md:text-center text-center"><h6 class="lg:text-5xl md:text-2xl font-bold">Editar</h6></div>
+                                    <div class="row-span-1 md:col-span-2 col-span-1 lg:text-left md:text-center text-center"> <p class="block clear">datos</p></div>
+                                  </div>
+                                </div>
+                              </div>
+      
+                              <div class="grid grid-cols-1 sm:grid-cols-1 gap-4 my-2 flex items-start pt-8 text-center">
+                               
+      
+                                <div class="block">
+                                  <a href="#" class="btn-primary">Ver todo</a>
+                                </div>
+                            </div>
+                            </div>   
+                        </div>
+                      </div>
+      
+      
+                      <div class="grid grid-cols-1 sm:grid-cols-4 gap-4 my-2 pt-6">
+                        <h5 class="font-bold pb-3">Productos</h5>
+                      </div>
+                      <div class="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4 my-2 lg:h-45 md:h-45 h-full">
+                        
+                          <div class="shadow-sm bg-white rounded flex justify-center items-center grid grid-cols-1 sm:grid-cols-1">
+                             <div class="text-center">
+                                <img src="../src/assets/icons/video-camera.svg" alt="Video" class="text-center mx-auto block p-3 mb-4 text-2xl border border-demo rounded-full">
+                                <p class="mt-0 mb-4 md:text-base text text-sm">Video recorrido</p>
+                                <a href="#" class="btn-primary">Ver todo</a>
+                             </div> 
+                          </div>
+      
+                          <div class="shadow-sm bg-white rounded flex justify-center items-center">
+                            <div class="text-center">
+                              <img src="../src/assets/icons/chat.svg" alt="Video" class="text-center mx-auto block p-3 mb-4 text-2xl border border-demo rounded-full">
+                              <p class="mt-0 mb-4 md:text-base text text-sm">Comentarios</p>
+                              <a href="#" class="btn-primary">Ver todo</a>
+                           </div> 
+                        </div>
+      
+                        <div class="shadow-sm bg-white rounded flex justify-center items-center">
+                          <div class="text-center">
+                            <img src="../src/assets/icons/photograph.svg" alt="Video" class="text-center mx-auto block p-3 mb-4 text-2xl border border-demo rounded-full">
+                            <p class="mt-0 mb-4 md:text-base text text-sm">Fotogalería</p>
+                            <a href="#" class="btn-primary">Ver todo</a>
+                         </div> 
+                      </div>
+      
+                      <div class="shadow-sm bg-white rounded flex justify-center items-center">
+                        <div class="text-center">
+                          <img src="../src/assets/icons/lightning-bolt.svg" alt="Video" class="text-center mx-auto block p-3 mb-4 text-2xl border border-demo rounded-full">
+                          <p class="mt-0 mb-4 md:text-base text text-sm">Demo</p>
+                          <a href="#" class="btn-primary">Ver todo</a>
+                       </div> 
+                    </div>
+      
+                      </div>
+                  </main>
+              </div>
+        
+            </div>
+            </div>
+        </li>
+    </ul>
+      
+
+   
+    </main>
+
+        <!-- JS -->
+        <script src="jquery.min.js"></script>
+        <script src="main.js"></script>
+    </body>
+</html>

@@ -19,10 +19,14 @@
     <body class="w-full">
         
       <nav class="bg-white">
-      <div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
+      <div class="mx-auto px-2 sm:px-6 lg:px-8 max-w-xs	md:max-w-full">
         <div class="relative flex items-center justify-between h-16">
           <div class="flex-1 flex items-center justify-start sm:items-stretch sm:justify-start">
-            <button id="sidebarBtn" class="px-4 py-2 text-gray-700 text-2xl rounded-lg hover:bg-gray-200">
+            <button id="sidebarBtn" class="px-4 py-2 text-gray-700 text-2xl rounded-lg hover:bg-gray-200 hidden md:block">
+              <img src="../src/assets/icons/menu.svg" alt="Menu"/>
+            </button>
+
+            <button id="sidebarBtnCel" class="px-4 py-2 text-gray-700 text-2xl rounded-lg hover:bg-gray-200 md:hidden">
               <img src="../src/assets/icons/menu.svg" alt="Menu"/>
             </button>
             
@@ -33,7 +37,7 @@
          <!-- Iconos derechos -->   
           <div class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0 z-10">
               
-              <form class="invisible sm:visible">
+              <form class="invisible sm:visible hidden md:block">
               <div class="relative text-gray-500 ml-6 px-3 pt-1">
                 <span class="absolute inset-y-0 left-0 flex items-center pl-2 pt-1">
                   <button type="submit" class="p-1 focus:outline-none focus:shadow-outline">
@@ -87,7 +91,7 @@
       </div>
     </nav>
 
-    <main class="flex bg-gray-100">
+    <main class="flex bg-gray-100 m-0 p-0 max-w-full">
 
       <!-- TABS -->
       <ul class="tabs w-full" role="tablist">
@@ -170,28 +174,28 @@
                 
         
                 <!-- Mobile Header & Nav -->
-                <header id="sidebarMobile" class="w-full py-5 px-6 sm:hidden hidden">
+                <header id="sidebarMobile2" class="w-full py-3 px-4 sm:hidden hidden max-w-full	">
                     
                     <!-- Dropdown Nav -->
                     <nav class="text-white text-base font-semibold">
-                      <a href="" class="block active-nav-link text-white py-4 pl-6">
-                        <img src="../src/assets/icons/home.svg" class="text-white p-2">
+                      <a href="" class="flex active-nav-link text-white py-2 px-0 text-sm items-center">
+                        <img src="../src/assets/icons/home.svg" class="text-white p-2 w-9 fill-current">
                          Inicio
                       </a>
-                      <a href="" class="block text-white opacity-75 hover:opacity-100 py-4 pl-6">
-                          <img src="../src/assets/icons/shopping-bag.svg" class="text-white p-2">
+                      <a href="" class="flex text-white opacity-75 hover:opacity-100 py-2 px-0 text-sm items-center">
+                          <img src="../src/assets/icons/shopping-bag.svg" class="text-white p-2 w-9  fill-current">
                           Productos
                       </a>
-                      <a href="" class="block text-white opacity-75 hover:opacity-100 py-4 pl-6 ">
-                          <img src="../src/assets/icons/chart-bar.svg" class="text-white p-2">
+                      <a href="" class="flex text-white opacity-75 hover:opacity-100 py-2 px-0 text-sm items-center">
+                          <img src="../src/assets/icons/chart-bar.svg" class="text-white p-2 w-9  fill-current">
                           Reportes
                       </a>
-                      <a href="" class="block text-white opacity-75 hover:opacity-100 py-4 pl-6">
-                          <img src="../src/assets/icons/cog.svg" class="text-white p-2">
+                      <a href="" class="flex text-white opacity-75 hover:opacity-100 py-2 px-0 text-sm items-center">
+                          <img src="../src/assets/icons/cog.svg" class="text-white p-2 w-9  fill-current">
                           Administrar
                       </a>
-                      <a href="" class="block text-white opacity-75 hover:opacity-100 py-4 pl-6">
-                         <img src="../src/assets/icons/document-text.svg" class="text-white p-2">
+                      <a href="" class="flex text-white opacity-75 hover:opacity-100 py-2 px-0 text-sm items-center">
+                         <img src="../src/assets/icons/document-text.svg" class="text-white p-2 w-9  fill-current">
                           Facturación
                       </a>
                     </nav>
@@ -209,16 +213,36 @@
                                   <div class="grid grid-cols-2 sm:grid-cols-2 gap-4 my-2  flex items-end">
                                     <div>
                                       <div class="grid grid-rows-2 md:grid-cols-1 lg:grid-flow-col gap-0">
-                                        <div class="lg:row-span-2 md:row-span-1 md:col-span-2 text-center mx-auto"><img src="../src/assets/icons/chart-pie.svg" alt="Chart" class="w-10"></div>
-                                        <div class="row-span-1 md:col-span-2 col-span-1 lg:text-left md:text-center text-center"><h6 class="lg:text-5xl md:text-2xl font-bold ">3245</h6></div>
+                                        <div class="lg:row-span-2 md:row-span-1 md:col-span-2 text-center mx-auto">
+                                          <div class="gaugeCard text-center mx-auto pr-0 mt-0 mr-auto lg:mt-1 lg: mr-2">
+                                            <div class="c100 p56 extraSmall">
+                                                <div class="donut-label text-warning">56<span>%</span></div>
+                                                <div class="slice">
+                                                    <div class="bar border-warning"></div>
+                                                    <div class="fill border-warning"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        </div>
+                                        <div class="row-span-1 md:col-span-2 col-span-1 lg:text-left md:text-center text-center"><h6 class="lg:text-3xl md:text-3xl text-3xl font-bold ">3,245</h6></div>
                                         <div class="row-span-1 md:col-span-2 col-span-1 lg:text-left md:text-center text-center mt-especial"> <p class="block clear">vistas</p></div>
                                       </div>
                                     </div>
         
                                     <div>
                                       <div class="grid grid-rows-2 md:grid-cols-1 lg:grid-flow-col gap-0">
-                                        <div class="lg:row-span-2 md:row-span-1 md:col-span-2 text-center mx-auto"><img src="../src/assets/icons/chart-pie.svg" alt="Chart" class="w-10"></div>
-                                        <div class="row-span-1 md:col-span-2 col-span-1 lg:text-left md:text-center text-center"><h6 class="lg:text-5xl md:text-2xl font-bold ">678</h6></div>
+                                        <div class="lg:row-span-2 md:row-span-1 md:col-span-2 text-center mx-auto">
+                                          <div class="gaugeCard text-center mx-auto pr-0 mt-0 mr-auto lg:mt-1 lg: mr-2">
+                                            <div class="c100 p10 extraSmall">
+                                                <div class="donut-label text-danger">10<span>%</span></div>
+                                                <div class="slice">
+                                                    <div class="bar border-danger"></div>
+                                                    <div class="fill border-danger"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        </div>
+                                        <div class="row-span-1 md:col-span-2 col-span-1 lg:text-left md:text-center text-center"><h6 class="lg:text-3xl md:text-3xl text-3xl font-bold ">678</h6></div>
                                         <div class="row-span-1 md:col-span-2 col-span-1 lg:text-left md:text-center text-center mt-especial"> <p class="block clear">solicitudes</p></div>
                                       </div>
                                     </div>
@@ -243,16 +267,16 @@
                                 <div class="grid grid-cols-2 sm:grid-cols-2 gap-4 my-2  flex items-end">
                                   <div>
                                     <div class="grid grid-rows-2 md:grid-cols-1 lg:grid-flow-col gap-0">
-                                      <div class="lg:row-span-2 md:row-span-1 md:col-span-2 text-center mx-auto"><img src="../src/assets/icons/document-text.svg" alt="Chart" class="w-10"/></div>
-                                      <div class="row-span-1 md:col-span-2 col-span-1 lg:text-left md:text-center text-center"><h6 class="lg:text-5xl md:text-2xl font-bold ">2</h6></div>
+                                      <div class="lg:row-span-2 md:row-span-1 md:col-span-2 text-center mx-auto"><img src="../src/assets/icons/document-text.svg" alt="Facturas" class="w-11"/></div>
+                                      <div class="row-span-1 md:col-span-2 col-span-1 lg:text-left md:text-center text-center md:items-end flex md:mx-auto mx-auto"><h6 class="lg:text-3xl md:text-3xl text-3xl font-bold ">2</h6></div>
                                       <div class="row-span-1 md:col-span-2 col-span-1 lg:text-left md:text-center text-center"> <p class="block clear">facturas</p></div>
                                     </div>
                                   </div>
         
                                   <div>
                                     <div class="grid grid-rows-2 md:grid-cols-1 lg:grid-flow-col gap-0">
-                                      <div class="lg:row-span-2 md:row-span-1 md:col-span-2 text-center mx-auto"><img src="../src/assets/icons/pencil.svg" alt="Chart" class="w-10"/></div>
-                                      <div class="row-span-1 md:col-span-2 col-span-1 lg:text-left md:text-center text-center"><h6 class="lg:text-5xl md:text-2xl font-bold">Editar</h6></div>
+                                      <div class="lg:row-span-2 md:row-span-1 md:col-span-2 text-center mx-auto"><img src="../src/assets/icons/pencil.svg" alt="Editar" class="w-11"/></div>
+                                      <div class="row-span-1 md:col-span-2 col-span-1 lg:text-left md:text-center text-center md:items-end flex md:mx-auto mx-auto"><h6 class="lg:text-3xl md:text-3xl text-3xl font-bold">Editar</h6></div>
                                       <div class="row-span-1 md:col-span-2 col-span-1 lg:text-left md:text-center text-center"> <p class="block clear">datos</p></div>
                                     </div>
                                   </div>
@@ -273,9 +297,9 @@
                         <div class="grid grid-cols-1 sm:grid-cols-4 gap-4 my-2 pt-6">
                           <h5 class="font-bold pb-3">Productos</h5>
                         </div>
-                        <div class="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4 my-2 lg:h-45 md:h-45 h-full">
+                        <div class="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4 my-2 lg:h-45 md:h-45 h-full mb-6 mb-md-0">
                           
-                            <div class="shadow-sm bg-white rounded flex justify-center items-center grid grid-cols-1 sm:grid-cols-1">
+                            <div class="shadow-sm bg-white rounded flex justify-center items-center grid grid-cols-1 sm:grid-cols-1 py-10 md:py-0 hover:opacity-75">
                                <div class="text-center">
                                   <img src="../src/assets/icons/video-camera.svg" alt="Video" class="text-center mx-auto block p-3 mb-4 text-2xl border border-demo rounded-full">
                                   <p class="mt-0 mb-4 md:text-base text text-sm">Video recorrido</p>
@@ -283,7 +307,7 @@
                                </div> 
                             </div>
         
-                            <div class="shadow-sm bg-white rounded flex justify-center items-center">
+                            <div class="shadow-sm bg-white rounded flex justify-center items-center py-10 md:py-0 hover:opacity-75">
                               <div class="text-center">
                                 <img src="../src/assets/icons/chat.svg" alt="Video" class="text-center mx-auto block p-3 mb-4 text-2xl border border-demo rounded-full">
                                 <p class="mt-0 mb-4 md:text-base text text-sm">Comentarios</p>
@@ -291,7 +315,7 @@
                              </div> 
                           </div>
         
-                          <div class="shadow-sm bg-white rounded flex justify-center items-center">
+                          <div class="shadow-sm bg-white rounded flex justify-center items-center py-10 md:py-0 hover:opacity-75">
                             <div class="text-center">
                               <img src="../src/assets/icons/photograph.svg" alt="Video" class="text-center mx-auto block p-3 mb-4 text-2xl border border-demo rounded-full">
                               <p class="mt-0 mb-4 md:text-base text text-sm">Fotogalería</p>
@@ -299,7 +323,7 @@
                            </div> 
                         </div>
         
-                        <div class="shadow-sm bg-white rounded flex justify-center items-center">
+                        <div class="shadow-sm bg-white rounded flex justify-center items-center py-10 md:py-0 hover:opacity-75">
                           <div class="text-center">
                             <img src="../src/assets/icons/lightning-bolt.svg" alt="Video" class="text-center mx-auto block p-3 mb-4 text-2xl border border-demo rounded-full">
                             <p class="mt-0 mb-4 md:text-base text text-sm">Demo</p>
@@ -395,33 +419,33 @@
                 
         
                 <!-- Mobile Header & Nav -->
-                <header id="sidebarMobile" class="w-full py-5 px-6 sm:hidden hidden">
+                <header id="sidebarMobile" class="w-full py-3 px-4 sm:hidden hidden max-w-full	">
                     
-                    <!-- Dropdown Nav -->
-                    <nav class="text-white text-base font-semibold">
-                      <a href="" class="block active-nav-link text-white py-4 pl-6">
-                        <img src="../src/assets/icons/home.svg" class="text-white p-2">
-                         Inicio
-                      </a>
-                      <a href="" class="block text-white opacity-75 hover:opacity-100 py-4 pl-6">
-                          <img src="../src/assets/icons/shopping-bag.svg" class="text-white p-2">
-                          Productos
-                      </a>
-                      <a href="" class="block text-white opacity-75 hover:opacity-100 py-4 pl-6 ">
-                          <img src="../src/assets/icons/chart-bar.svg" class="text-white p-2">
-                          Reportes
-                      </a>
-                      <a href="" class="block text-white opacity-75 hover:opacity-100 py-4 pl-6">
-                          <img src="../src/assets/icons/cog.svg" class="text-white p-2">
-                          Administrar
-                      </a>
-                      <a href="" class="block text-white opacity-75 hover:opacity-100 py-4 pl-6">
-                         <img src="../src/assets/icons/document-text.svg" class="text-white p-2">
-                          Facturación
-                      </a>
-                    </nav>
-        
-                </header>
+                  <!-- Dropdown Nav -->
+                  <nav class="text-white text-base font-semibold">
+                    <a href="" class="flex active-nav-link text-white py-2 px-0 text-sm items-center">
+                      <img src="../src/assets/icons/home.svg" class="text-white p-2 w-9 fill-current">
+                       Inicio
+                    </a>
+                    <a href="" class="flex text-white opacity-75 hover:opacity-100 py-2 px-0 text-sm items-center">
+                        <img src="../src/assets/icons/shopping-bag.svg" class="text-white p-2 w-9  fill-current">
+                        Productos
+                    </a>
+                    <a href="" class="flex text-white opacity-75 hover:opacity-100 py-2 px-0 text-sm items-center">
+                        <img src="../src/assets/icons/chart-bar.svg" class="text-white p-2 w-9  fill-current">
+                        Reportes
+                    </a>
+                    <a href="" class="flex text-white opacity-75 hover:opacity-100 py-2 px-0 text-sm items-center">
+                        <img src="../src/assets/icons/cog.svg" class="text-white p-2 w-9  fill-current">
+                        Administrar
+                    </a>
+                    <a href="" class="flex text-white opacity-75 hover:opacity-100 py-2 px-0 text-sm items-center">
+                       <img src="../src/assets/icons/document-text.svg" class="text-white p-2 w-9  fill-current">
+                        Facturación
+                    </a>
+                  </nav>
+      
+              </header>
         
                 <div class="w-full overflow-x-hidden border-t flex flex-col">
                   <main class="w-full  p-6 h-nav">
@@ -434,16 +458,36 @@
                                 <div class="grid grid-cols-2 sm:grid-cols-2 gap-4 my-2  flex items-end">
                                   <div>
                                     <div class="grid grid-rows-2 md:grid-cols-1 lg:grid-flow-col gap-0">
-                                      <div class="lg:row-span-2 md:row-span-1 md:col-span-2 text-center mx-auto"><img src="../src/assets/icons/chart-pie.svg" alt="Chart" class="w-10"></div>
-                                      <div class="row-span-1 md:col-span-2 col-span-1 lg:text-left md:text-center text-center"><h6 class="lg:text-5xl md:text-2xl font-bold ">3245</h6></div>
+                                      <div class="lg:row-span-2 md:row-span-1 md:col-span-2 text-center mx-auto">
+                                        <div class="gaugeCard text-center mx-auto pr-0 mt-0 mr-auto lg:mt-1 lg: mr-2">
+                                          <div class="c100 p67 extraSmall">
+                                              <div class="donut-label text-success">67<span>%</span></div>
+                                              <div class="slice">
+                                                  <div class="bar border-success"></div>
+                                                  <div class="fill border-success"></div>
+                                              </div>
+                                          </div>
+                                      </div>
+                                      </div>
+                                      <div class="row-span-1 md:col-span-2 col-span-1 lg:text-left md:text-center text-center"><h6 class="lg:text-3xl md:text-3xl text-3xl font-bold ">3,245</h6></div>
                                       <div class="row-span-1 md:col-span-2 col-span-1 lg:text-left md:text-center text-center mt-especial"> <p class="block clear">vistas</p></div>
                                     </div>
                                   </div>
       
                                   <div>
                                     <div class="grid grid-rows-2 md:grid-cols-1 lg:grid-flow-col gap-0">
-                                      <div class="lg:row-span-2 md:row-span-1 md:col-span-2 text-center mx-auto"><img src="../src/assets/icons/chart-pie.svg" alt="Chart" class="w-10"></div>
-                                      <div class="row-span-1 md:col-span-2 col-span-1 lg:text-left md:text-center text-center"><h6 class="lg:text-5xl md:text-2xl font-bold ">678</h6></div>
+                                      <div class="lg:row-span-2 md:row-span-1 md:col-span-2 text-center mx-auto">
+                                        <div class="gaugeCard text-center mx-auto pr-0 mt-0 mr-auto lg:mt-1 lg: mr-2">
+                                          <div class="c100 p30 extraSmall">
+                                              <div class="donut-label text-danger">30<span>%</span></div>
+                                              <div class="slice">
+                                                  <div class="bar border-danger"></div>
+                                                  <div class="fill border-danger"></div>
+                                              </div>
+                                          </div>
+                                      </div>
+                                      </div>
+                                      <div class="row-span-1 md:col-span-2 col-span-1 lg:text-left md:text-center text-center"><h6 class="lg:text-3xl md:text-3xl text-3xl font-bold ">678</h6></div>
                                       <div class="row-span-1 md:col-span-2 col-span-1 lg:text-left md:text-center text-center mt-especial"> <p class="block clear">solicitudes</p></div>
                                     </div>
                                   </div>
@@ -468,16 +512,16 @@
                               <div class="grid grid-cols-2 sm:grid-cols-2 gap-4 my-2  flex items-end">
                                 <div>
                                   <div class="grid grid-rows-2 md:grid-cols-1 lg:grid-flow-col gap-0">
-                                    <div class="lg:row-span-2 md:row-span-1 md:col-span-2 text-center mx-auto"><img src="../src/assets/icons/document-text.svg" alt="Chart" class="w-10"/></div>
-                                    <div class="row-span-1 md:col-span-2 col-span-1 lg:text-left md:text-center text-center"><h6 class="lg:text-5xl md:text-2xl font-bold ">2</h6></div>
+                                    <div class="lg:row-span-2 md:row-span-1 md:col-span-2 text-center mx-auto"><img src="../src/assets/icons/document-text.svg" alt="Facturas" class="w-11"/></div>
+                                    <div class="row-span-1 md:col-span-2 col-span-1 lg:text-left md:text-center text-center md:items-end flex md:mx-auto mx-auto"><h6 class="lg:text-3xl md:text-3xl text-3xl font-bold ">2</h6></div>
                                     <div class="row-span-1 md:col-span-2 col-span-1 lg:text-left md:text-center text-center"> <p class="block clear">facturas</p></div>
                                   </div>
                                 </div>
       
                                 <div>
                                   <div class="grid grid-rows-2 md:grid-cols-1 lg:grid-flow-col gap-0">
-                                    <div class="lg:row-span-2 md:row-span-1 md:col-span-2 text-center mx-auto"><img src="../src/assets/icons/pencil.svg" alt="Chart" class="w-10"/></div>
-                                    <div class="row-span-1 md:col-span-2 col-span-1 lg:text-left md:text-center text-center"><h6 class="lg:text-5xl md:text-2xl font-bold">Editar</h6></div>
+                                    <div class="lg:row-span-2 md:row-span-1 md:col-span-2 text-center mx-auto"><img src="../src/assets/icons/pencil.svg" alt="Editar" class="w-11"/></div>
+                                    <div class="row-span-1 md:col-span-2 col-span-1 lg:text-left md:text-center text-center md:items-end flex md:mx-auto mx-auto"><h6 class="lg:text-3xl md:text-3xl text-3xl font-bold">Editar</h6></div>
                                     <div class="row-span-1 md:col-span-2 col-span-1 lg:text-left md:text-center text-center"> <p class="block clear">datos</p></div>
                                   </div>
                                 </div>
@@ -500,7 +544,7 @@
                       </div>
                       <div class="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4 my-2 lg:h-45 md:h-45 h-full">
                         
-                          <div class="shadow-sm bg-white rounded flex justify-center items-center grid grid-cols-1 sm:grid-cols-1">
+                          <div class="shadow-sm bg-white rounded flex justify-center items-center grid grid-cols-1 sm:grid-cols-1 py-10 md:py-0 hover:opacity-75">
                              <div class="text-center">
                                 <img src="../src/assets/icons/video-camera.svg" alt="Video" class="text-center mx-auto block p-3 mb-4 text-2xl border border-demo rounded-full">
                                 <p class="mt-0 mb-4 md:text-base text text-sm">Video recorrido</p>
@@ -508,7 +552,7 @@
                              </div> 
                           </div>
       
-                          <div class="shadow-sm bg-white rounded flex justify-center items-center">
+                          <div class="shadow-sm bg-white rounded flex justify-center items-center py-10 md:py-0 hover:opacity-75">
                             <div class="text-center">
                               <img src="../src/assets/icons/chat.svg" alt="Video" class="text-center mx-auto block p-3 mb-4 text-2xl border border-demo rounded-full">
                               <p class="mt-0 mb-4 md:text-base text text-sm">Comentarios</p>
@@ -516,7 +560,7 @@
                            </div> 
                         </div>
       
-                        <div class="shadow-sm bg-white rounded flex justify-center items-center">
+                        <div class="shadow-sm bg-white rounded flex justify-center items-center py-10 md:py-0 hover:opacity-75">
                           <div class="text-center">
                             <img src="../src/assets/icons/photograph.svg" alt="Video" class="text-center mx-auto block p-3 mb-4 text-2xl border border-demo rounded-full">
                             <p class="mt-0 mb-4 md:text-base text text-sm">Fotogalería</p>
@@ -524,7 +568,7 @@
                          </div> 
                       </div>
       
-                      <div class="shadow-sm bg-white rounded flex justify-center items-center">
+                      <div class="shadow-sm bg-white rounded flex justify-center items-center py-10 md:py-0 hover:opacity-75">
                         <div class="text-center">
                           <img src="../src/assets/icons/lightning-bolt.svg" alt="Video" class="text-center mx-auto block p-3 mb-4 text-2xl border border-demo rounded-full">
                           <p class="mt-0 mb-4 md:text-base text text-sm">Demo</p>
